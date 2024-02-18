@@ -1,8 +1,11 @@
+import todoReducer from "@/reducers/TodoReducer";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {},
+    reducer: {
+      todoReducer,
+    },
   });
 };
 
