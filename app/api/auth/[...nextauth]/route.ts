@@ -9,7 +9,7 @@ const handler = NextAuth({
         if (!username || !password) throw new Error("Invalid credentials");
 
         const response = await fetch(
-          `${process.env.SERVER_BASE_API}/auth/login`,
+          `${process.env.NEXT_PUBLIC_SERVER_BASE_API}/auth/login`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -37,7 +37,7 @@ const handler = NextAuth({
           throw new Error("Invalid user data");
 
         const response = await fetch(
-          `${process.env.SERVER_BASE_API}/users/add`,
+          `${process.env.NEXT_PUBLIC_SERVER_BASE_API}/users/add`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

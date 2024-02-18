@@ -1,6 +1,7 @@
-import { Typography } from "@mui/material";
+import Home from "@/components/pages/home";
+import { fetchTodos } from "@/utils";
 
-export default function Home() {
-  const x = 2;
-  return <Typography variant="h1">To-do App</Typography>;
+export default async function Page() {
+  const { todos } = await fetchTodos();
+  return <Home todos={todos} />;
 }
